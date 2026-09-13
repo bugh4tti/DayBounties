@@ -1,0 +1,56 @@
+# ============================
+# DayBounties - Configuración
+# ============================
+
+settings:
+  max-bounties-per-player: 5
+  moneda-por-defecto: "vault" # vault | items
+  prefix: "&8[&6DayBounties&8] &r"
+
+messages:
+
+  general:
+    no-permiso: "<prefix>&cNo tenés permiso para usar este comando."
+    jugador-no-encontrado: "<prefix>&cEl jugador &e<jugador>&c no fue encontrado."
+    jugador-no-conectado: "<prefix>&cEl jugador &e<jugador>&c no está conectado."
+    solo-jugadores: "<prefix>&cEste comando solo puede ser usado por jugadores."
+    comando-invalido: "<prefix>&cUso incorrecto. Escribí &e/bounty help&c para ver los comandos."
+
+  set:
+    exito: "<prefix>&aColocaste una recompensa de &e<monto>&a sobre &e<recompensado>&a."
+    exito-recompensado: "<prefix>&c¡<recompensante>&c puso una recompensa de &e<monto>&c sobre vos!"
+    broadcast: "<prefix>&6<recompensante> &fcolocó una recompensa de &e<monto>&f sobre &6<recompensado>&f."
+    no-a-uno-mismo: "<prefix>&cNo podés colocar una recompensa sobre vos mismo."
+    limite-alcanzado: "<prefix>&c<recompensado>&c ya tiene el máximo de &e<max>&c recompensas activas."
+    fondos-insuficientes: "<prefix>&cNo tenés suficiente dinero para colocar esa recompensa."
+    monto-invalido: "<prefix>&cEl monto ingresado no es válido."
+    items-en-mano-invalidos: "<prefix>&cDebés tener un ítem en la mano para colocar esta recompensa."
+
+  claim:
+    exito: "<prefix>&aReclamaste la recompensa sobre &e<recompensado>&a por &e<monto>&a."
+    exito-recompensante: "<prefix>&e<recompensador>&a reclamó tu recompensa sobre &e<recompensado>&a."
+    broadcast: "<prefix>&6<recompensador> &freclamó la recompensa sobre &6<recompensado>&f y ganó &e<monto>&f."
+    sin-bounty: "<prefix>&c<recompensado>&c no tiene ninguna recompensa activa."
+    no-puede-reclamar-propia: "<prefix>&cNo podés reclamar una recompensa que vos mismo colocaste."
+    objetivo-debe-estar-muerto: "<prefix>&cEl jugador &e<recompensado>&c debe estar eliminado para reclamar esta recompensa."
+
+  list:
+    titulo: "<prefix>&6Recompensas activas sobre &e<recompensado>&6:"
+    formato-item: "&8- &f<recompensante> &7» &e<monto>"
+    sin-resultados: "<prefix>&7<recompensado> no tiene recompensas activas."
+
+  cancel:
+    exito: "<prefix>&aCancelaste tu recompensa sobre &e<recompensado>&a. Se te devolvió &e<monto>&a."
+    sin-permiso-cancelar: "<prefix>&cSolo podés cancelar recompensas que vos mismo colocaste."
+
+gui:
+  titulo-principal: "&8Bounties &7» &f<recompensado>"
+  titulo-colocar: "&8Colocar recompensa"
+  item-info-nombre: "&e<recompensado>"
+  item-info-lore:
+    - "&7Total acumulado: &6<monto>"
+    - "&7Recompensas activas: &f<cantidad>/<max>"
+  boton-vault-nombre: "&aPagar con Vault"
+  boton-items-nombre: "&6Pagar con ítems"
+  boton-confirmar-nombre: "&a✔ Confirmar"
+  boton-cancelar-nombre: "&c✘ Cancelar"
