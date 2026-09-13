@@ -9,6 +9,7 @@ public class Main extends JavaPlugin {
 
     private static Main instance;
     private BountyManager bountyManager;
+    private BountyGUI bountyGUI;
     private Economy economy;
 
     @Override
@@ -22,6 +23,7 @@ public class Main extends JavaPlugin {
         }
 
         this.bountyManager = new BountyManager(this);
+        this.bountyGUI = new BountyGUI(this);
 
         getCommand("bounty").setExecutor(new BountyCommand(this));
 
@@ -53,6 +55,10 @@ public class Main extends JavaPlugin {
         return bountyManager;
     }
 
+    public BountyGUI getBountyGUI() {
+        return bountyGUI;
+    }
+
     public FileConfiguration getMessages() {
         return getConfig();
     }
@@ -60,4 +66,4 @@ public class Main extends JavaPlugin {
     public static Main getInstance() {
         return instance;
     }
-  }
+}
