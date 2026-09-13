@@ -292,7 +292,7 @@ public class BountyCommand implements CommandExecutor {
         if (args.length >= 2) {
             String nombreObjetivo = args[1];
             OfflinePlayer objetivo = Bukkit.getOfflinePlayer(nombreObjetivo);
-            new BountyGUI(plugin).abrirMenuPrincipal(jugador, objetivo);
+            plugin.getBountyGUI().abrirMenuPrincipal(jugador, objetivo);
         } else {
             enviarMensaje(sender, "general.comando-invalido", null, null, null, null);
         }
@@ -319,4 +319,4 @@ public class BountyCommand implements CommandExecutor {
 
         return ChatColor.translateAlternateColorCodes('&', texto);
     }
-                          }
+                              }
