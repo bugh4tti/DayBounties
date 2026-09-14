@@ -26,6 +26,7 @@ public class Main extends JavaPlugin {
         this.bountyGUI = new BountyGUI(this);
 
         getCommand("bounty").setExecutor(new BountyCommand(this));
+        getCommand("bounty").setTabCompleter(new BountyTabCompleter());
 
         getLogger().info("DayBounties habilitado correctamente.");
     }
