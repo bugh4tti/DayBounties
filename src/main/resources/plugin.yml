@@ -8,8 +8,8 @@ depend: [Vault]
 commands:
   bounty:
     description: Comando principal de DayBounties
-    usage: /bounty <set|claim|list|cancel|help>
-    aliases: [bounties, db]
+    usage: /bounty <set|claim|list|cancel|gui|help>
+    aliases: [bounties, db, dbounties, daybounties]
 
 permissions:
   daybounties.use:
