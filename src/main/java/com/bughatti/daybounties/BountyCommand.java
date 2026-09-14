@@ -47,6 +47,9 @@ public class BountyCommand implements CommandExecutor {
             case "menu":
                 manejarGui(sender, args);
                 break;
+            case "help":
+                manejarHelp(sender);
+                break;
             default:
                 enviarMensaje(sender, "general.comando-invalido", null, null, null, null);
                 break;
@@ -299,6 +302,26 @@ public class BountyCommand implements CommandExecutor {
     }
 
     // ==========================
+    // /bounty help
+    // ==========================
+    private void manejarHelp(CommandSender sender) {
+        sender.sendMessage(colorearHelp("&8&m--------------------------------"));
+        sender.sendMessage(colorearHelp("&6&lDayBounties &7- Comandos"));
+        sender.sendMessage(colorearHelp("&e/bounty set <jugador> <monto> &7- Coloca recompensa en dinero"));
+        sender.sendMessage(colorearHelp("&e/bounty set <jugador> items &7- Coloca recompensa con el ítem en mano"));
+        sender.sendMessage(colorearHelp("&e/bounty claim <jugador> &7- Reclama las recompensas activas"));
+        sender.sendMessage(colorearHelp("&e/bounty list [jugador] &7- Lista las recompensas activas"));
+        sender.sendMessage(colorearHelp("&e/bounty cancel <jugador> &7- Cancela tu recompensa"));
+        sender.sendMessage(colorearHelp("&e/bounty gui <jugador> &7- Abre el menú visual"));
+        sender.sendMessage(colorearHelp("&7Alias: /db, /bounties, /dbounties, /daybounties"));
+        sender.sendMessage(colorearHelp("&8&m--------------------------------"));
+    }
+
+    private String colorearHelp(String texto) {
+        return ChatColor.translateAlternateColorCodes('&', texto);
+    }
+
+    // ==========================
     // Utilidades de mensajes
     // ==========================
     private void enviarMensaje(CommandSender sender, String ruta, String recompensante, String recompensado, String monto, String max) {
@@ -319,4 +342,4 @@ public class BountyCommand implements CommandExecutor {
 
         return ChatColor.translateAlternateColorCodes('&', texto);
     }
-                              }
+    }
